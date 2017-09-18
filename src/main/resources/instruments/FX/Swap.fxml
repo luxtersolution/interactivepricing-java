@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.luxter.interprice.instruments.FX.SwapController">
+   <children>
+      <GridPane hgap="5.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" maxWidth="200.0" minWidth="20.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="20.0" prefWidth="170.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Underlying" />
+            <Label text="Initial Settlement Date" GridPane.rowIndex="1" />
+            <Label text="Base Notional" GridPane.rowIndex="3" />
+            <DatePicker fx:id="initialSettlementDate" maxWidth="-Infinity" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="underlying" maxWidth="-Infinity" prefWidth="150.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ComboBox>
+            <TextField fx:id="baseNotional" maxWidth="-Infinity" prefWidth="150.0" text="10000" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Term Notional" GridPane.rowIndex="4" />
+            <TextField fx:id="termNotional" maxWidth="-Infinity" prefWidth="150.0" text="11775" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Final Settlement Date" GridPane.rowIndex="2" />
+            <DatePicker fx:id="finalSettlementDate" maxWidth="-Infinity" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Spread" GridPane.rowIndex="5" />
+            <TextField fx:id="spread" maxWidth="-Infinity" prefWidth="150.0" promptText="Spread value" text="1000" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>

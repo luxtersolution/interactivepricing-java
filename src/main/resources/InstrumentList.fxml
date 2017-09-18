@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="instrumentClassesTabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.luxter.interprice.InstrumentListController">
+  <tabs>
+    <Tab id="FX" text="FX">
+      <content>
+          <AnchorPane>
+              <ListView fx:id="instrumentList" layoutX="113.0" layoutY="112.0" onMouseClicked="#showInstrument" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+          </AnchorPane>
+      </content>
+    </Tab>
+    <Tab id="EQ" text="EQ">
+      <content>
+        <AnchorPane />
+      </content>
+    </Tab>
+      <Tab id="IR" text="IR">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.luxter.interprice.instruments.FX.SingleBarrierOptionController">
+   <columnConstraints>
+      <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity" />
+      <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="170.0" />
+      <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity" />
+      <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="170.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+   </rowConstraints>
+   <children>
+      <Label text="Underlying">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Settlement Date" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Notional" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <DatePicker fx:id="settlementDate" maxWidth="-Infinity" prefWidth="150.0" promptText="Choose Date" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ComboBox fx:id="underlying" maxWidth="-Infinity" prefWidth="150.0" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </ComboBox>
+      <TextField fx:id="notional" maxWidth="-Infinity" prefWidth="150.0" promptText="Input integer number" text="10000" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label text="Notional Currency" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Expiry Date" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></Label>
+      <DatePicker fx:id="expiryDate" maxWidth="-Infinity" prefWidth="150.0" promptText="Choose Date" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ComboBox fx:id="notionalCurrency" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label text="Settlement Type" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></Label>
+      <Label text="Barrier Direction" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></Label>
+      <Label text="Barrier" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></Label>
+      <ComboBox fx:id="settlementType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:value="cash" />
+            <String fx:value="delivery" />
+         </FXCollections>
+      </items>
+      </ComboBox>
+      <ComboBox fx:id="barrierDirection" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Up" />
+                  <String fx:value="Down" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <TextField fx:id="barrier" maxWidth="-Infinity" prefWidth="150.0" promptText="Input number" text="1.1" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Label text="Option Type" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="optionType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:value="call" />
+            <String fx:value="put" />
+         </FXCollections>
+      </items>
+      </ComboBox>
+      <Label text="Strike" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="strike" maxWidth="-Infinity" prefWidth="150.0" promptText="Input integer number" text="10000" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label text="Barrier Type" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="barrierType" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="KnockIn" />
+               <String fx:value="KnockOut" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label text="Rebate" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="rebate" maxWidth="-Infinity" prefWidth="150.0" promptText="Input number" text="1.1" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Label text="Rebate Currency" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Rebate Time" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="rebateCurrency" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <ComboBox fx:id="rebateTime" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="At Hit" />
+               <String fx:value="At Expiry" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+   </children>
+</GridPane>
