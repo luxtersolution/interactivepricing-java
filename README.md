@@ -1,3 +1,3 @@
 # JavaGUI
 
-GUI for interactivepricing
+Java GUI for interactivepricing
